@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Informações Pessoais</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .form-container {
+            margin-top: 50px;
+            max-width: 600px;
+        }
+        .not-editable {
+            background-color: #e9ecef;
+        }
+        .nav-link {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../campoMinado/campoMinado.html">Campo Minado</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"             aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="../ranking/ranking.html">Ranking Global</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../campoMinado/campoMinado.html">Voltar ao Jogo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../main.html">Desconectar</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container form-container">
+    <h2 class="text-center">Editar Informações Pessoais</h2>
+    <form>
+        <div class="form-group">
+            <label for="full_name">Nome Completo:</label>
+            <input type="text" class="form-control" id="full_name" name="full_name" value="Guilherme do HTML" required>
+        </div>
+        <div class="form-group">
+            <label for="birth_date">Data de Nascimento:</label>
+            <input type="date" class="form-control not-editable" id="birth_date" name="birth_date" value="1990-05-15" readonly>
+        </div>
+        <div class="form-group">
+            <label for="cpf">CPF:</label>
+            <input type="text" class="form-control not-editable" id="cpf" name="cpf" value="123.456.789-00" readonly>
+        </div>
+        <div class="form-group">
+            <label for="phone">Telefone:</label>
+            <input type="tel" class="form-control" id="phone" name="phone" value="(11) 91234-5678" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" class="form-control" id="email" name="email" value="GUIGUI.PROG@example.com" required>
+        </div>
+        <div class="form-group">
+            <label for="username">Nome de Usuário (único):</label>
+            <input type="text" class="form-control not-editable" id="username" name="username" value="Gui123" readonly>
+        </div>
+        <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="password" class="form-control" id="password" name="password" value="senha123" required>
+        </div>
+        <button type="button" class="btn btn-primary btn-block" onclick="window.location.href='../campoMinado/campoMinado.html';">Salvar alterações</button>
+
+    </form>
+</div>
+</body>
+</html>
