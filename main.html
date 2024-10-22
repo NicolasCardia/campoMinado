@@ -8,16 +8,19 @@
 <body>
 <div class="login-container">
     <h2>Bombardeio <br> Da Tropa 💣</h2>
-    <form>
+    <form onsubmit="return validateForm()">
         <label for="username">Usuário:</label>
-        <input type="text" id="username" name="username" required>
+        <input class="form-control" type="text" id="username" name="username" required>
 
         <label for="password">Senha:</label>
         <input type="password" id="password" name="password" required>
 
-        <button type="button" class="btn btn-primary" onclick="window.location.href='./campoMinado/campoMinado.html';">Entrar</button>
+        <button type="submit" class="btn btn-primary">Entrar</button>
     </form>
     <p>Não tem uma conta? <a href="./cadastro/cadastro.html">Faça seu cadastro</a></p>
 </div>
+
+<script  src="main.js"></script>
+
 </body>
 </html>

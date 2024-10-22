@@ -16,3 +16,32 @@
 .nav-link {
     margin-right: 15px;
 }
+#game-board {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+.btn-cell {
+    width: 40px;
+    height: 40px;
+    margin: 0.25rem;
+    display: inline-block;
+    text-align: center;
+}
+.btn-cell.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn-cell.revealed {
+    pointer-events: none;
+    background-color: #b3b3b3;
+}
+
+.btn-cell.mine::after {
+    content: '💣';
+}
+#reiniciarJogo {
+    margin-top: 20px;
+}
