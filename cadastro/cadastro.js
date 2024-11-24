@@ -1,16 +1,42 @@
 function validateForm() {
-  var nome = document.getElementById("nome").value;
-  var dataNascimento = document.getElementById("dataNascimento").value;
-  var cpf = document.getElementById("cpf").value;
-  var telefone = document.getElementById("telefone").value;
-  var email = document.getElementById("email").value;
-  var username = document.getElementById("username").value;
-  var senha = document.getElementById("senha").value;
+  const nome = document.getElementById('nome').value;
+  const cpf = document.getElementById('cpf').value;
+  const email = document.getElementById('email').value;
+  const senha = document.getElementById('senha').value;
 
-  if (nome === "" || dataNascimento === "" || cpf === "" || telefone === "" || email === "" || username === "" || senha === "") {
-      alert("Por favor, preencha todos os campos.");
+  if (nome === '' || cpf === '' || email === '' || senha === '') {
+      alert("Por favor, preencha todos os campos obrigatórios!");
+      return false;
+  }
+
+  //valida o cpf
+  if (!/^\d{11}$/.test(cpf)) {
+      alert("CPF inválido. Por favor, digite um CPF com 11 números.");
+      return false;
+  }
+
+  // Validação de e-mail
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+      alert("Por favor, insira um e-mail válido.");
       return false;
   }
 
   return true;
+}
+console.log(bootstrap);
+function showModal() {
+  const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+  successModal.show();
+}
+
+// Redirecionar para a página de login
+function redirectToLogin() {
+  window.location.href = '../main.html';
+}
+
+// Verificar o parâmetro na URL
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('success') === 'true') {
+  showModal();
 }

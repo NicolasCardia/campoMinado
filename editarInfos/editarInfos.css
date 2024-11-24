@@ -1,0 +1,10 @@
+.form-container {
+  margin-top: 50px;
+  max-width: 600px;
+}
+.not-editable {
+  background-color: #e9ecef;
+}
+.nav-link {
+  margin-right: 15px;
+}

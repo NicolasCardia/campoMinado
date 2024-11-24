@@ -11,7 +11,7 @@
 
 <body>
 <nav class="navbar mb-3 navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Campo Minado</a>
+    <a class="navbar-brand ml-2" href="#">Campo Minado</a>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -92,43 +92,24 @@
             <h3>Histórico de Partidas</h3>
             <table class="table table-striped">
                 <thead>
-                <tr>
-                    <th>Nome do Jogador</th>
-                    <th>Dimensões do Campo</th>
-                    <th>Número de Bombas</th>
-                    <th>Modalidade</th>
-                    <th>Tempo Gasto</th>
-                    <th>Resultado</th>
-                    <th>Data/Hora</th>
-                </tr>
+                    <tr>
+                        <th>Nome do Jogador</th>
+                        <th>Dimensões do Campo</th>
+                        <th>Número de Bombas</th>
+                        <th>Modalidade</th>
+                        <th>Tempo Gasto</th>
+                        <th>Resultado</th>
+                        <th>Data/Hora</th>
+                    </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <td>ZEZINHO</td>
-                    <td>10x10</td>
-                    <td>15</td>
-                    <td>Clássico</td>
-                    <td>5:00</td>
-                    <td>Vitória</td>
-                    <td>01/10/2023 14:30</td>
-                </tr>
-                <tr>
-                    <td>ZEZINHO</td>
-                    <td>15x15</td>
-                    <td>30</td>
-                    <td>Rivotril</td>
-                    <td>3:45</td>
-                    <td>Derrota</td>
-                    <td>02/10/2023 16:20</td>
-                </tr>
-                </tbody>
+                <tbody id="historicoPartidas"></tbody>
             </table>
         </div>
-    </div>
+    </div>    
 </div>
 
-<script src="./campoMinado.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./campoMinado.js"></script>
 
 </body>
 </html>

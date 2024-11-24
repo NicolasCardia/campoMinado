@@ -1,12 +1,30 @@
+// Valida o formulário antes de enviar
 function validateForm() {
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  const errorMessage = document.getElementById("error-message");
+
+  // Limpa mensagens anteriores
+  errorMessage.textContent = "";
 
   if (username === "" || password === "") {
-      alert("Por favor, preencha todos os campos.");
+      errorMessage.textContent = "Por favor, preencha todos os campos.";
       return false;
   }
 
-  window.location.href = './campoMinado/campoMinado.html';
-  return false;
+  return true; // Permite o envio do formulário
 }
+
+// Exibe mensagem de erro se existir na URL
+function showErrorFromURL() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const error = urlParams.get('error');
+  const errorMessage = document.getElementById('error-message');
+
+  if (error) {
+      errorMessage.textContent = decodeURIComponent(error); // Exibe o erro em texto
+  }
+}
+
+// Executa a função ao carregar a página
+window.onload = showErrorFromURL;

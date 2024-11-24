@@ -1,152 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Ranking Global de Jogadores</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="ranking.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ranking Global de Jogadores</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ranking.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="../campoMinado/campoMinado.html">Campo Minado</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../editarInfos/editarInfos.html">Editar Informações Pessoais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../campoMinado/campoMinado.html">Voltar ao Jogo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../main.html">Desconectar</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="../campoMinado/campoMinado.html">Campo Minado</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="../editarInfos/editarInfos.html">Editar Informações Pessoais</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../main.html">Desconectar</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Ranking Global de Jogadores</h2>
 
-<div class="container mt-5">
-  <h2 class="text-center mb-4">Ranking Global de Jogadores</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+          <thead class="thead-dark">
+          <tr>
+            <th>Posição</th>
+            <th>Username</th>
+            <th>Dimensões do Tabuleiro</th>
+            <th>Número de Bombas</th>
+            <th>Modalidade</th>
+            <th>Tempo de Partida</th>
+            <th>Resultado</th>
+            <th>Data/Hora</th>
+          </tr>
+          </thead>
+          <tbody id="rankingTable" />
+        </table>
+      </div>
+    </div>
 
-  <div class="table-responsive">
-    <table class="table table-striped table-bordered">
-      <thead class="thead-dark">
-      <tr>
-        <th>Posição</th>
-        <th>Username</th>
-        <th>Dimensões do Tabuleiro</th>
-        <th>Número de Bombas</th>
-        <th>Modalidade</th>
-        <th>Tempo de Partida</th>
-        <th>Resultado</th>
-        <th>Data/Hora</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>1º</td>
-        <td>Guilherme Coelho</td>
-        <td>20x20</td>
-        <td>50</td>
-        <td>Clássico</td>
-        <td>10:45</td>
-        <td>Vitória</td>
-        <td>03/09/2023 15:22</td>
-      </tr>
-      <tr>
-        <td>2º</td>
-        <td>Guilhermão do HTML</td>
-        <td>20x20</td>
-        <td>50</td>
-        <td>Rivotril</td>
-        <td>11:05</td>
-        <td>Vitória</td>
-        <td>04/09/2023 13:45</td>
-      </tr>
-      <tr>
-        <td>3º</td>
-        <td>Guilhermão do HTML</td>
-        <td>20x20</td>
-        <td>50</td>
-        <td>Rivotril</td>
-        <td>11:05</td>
-        <td>Vitória</td>
-        <td>04/09/2023 13:45</td>
-      </tr>
-      <tr>
-        <td>4º</td>
-        <td>Guilhermão do HTML</td>
-        <td>20x20</td>
-        <td>50</td>
-        <td>Rivotril</td>
-        <td>11:05</td>
-        <td>Vitória</td>
-        <td>04/09/2023 13:45</td>
-      </tr>
-      <tr>
-        <td>5º</td>
-        <td>Guilhermão do HTML</td>
-        <td>20x20</td>
-        <td>50</td>
-        <td>Rivotril</td>
-        <td>11:05</td>
-        <td>Vitória</td>
-        <td>04/09/2023 13:45</td>
-      </tr>
-      <tr>
-        <td>6º</td>
-        <td>Guilherme Coelho</td>
-        <td>20x20</td>
-        <td>50</td>
-        <td>Clássico</td>
-        <td>10:45</td>
-        <td>Vitória</td>
-        <td>03/09/2023 15:22</td>
-      </tr>
-      <tr>
-        <td>7º</td>
-        <td>Guilherme Coelho</td>
-        <td>20x20</td>
-        <td>50</td>
-        <td>Clássico</td>
-        <td>10:45</td>
-        <td>Vitória</td>
-        <td>03/09/2023 15:22</td>
-      </tr>
-      <tr>
-        <td>8º</td>
-        <td>Guilherme Coelho</td>
-        <td>20x20</td>
-        <td>50</td>
-        <td>Clássico</td>
-        <td>10:45</td>
-        <td>Vitória</td>
-        <td>03/09/2023 15:22</td>
-      </tr>
-      <tr>
-        <td>9º</td>
-        <td>Guilherme Coelho</td>
-        <td>20x20</td>
-        <td>50</td>
-        <td>Clássico</td>
-        <td>10:45</td>
-        <td>Vitória</td>
-        <td>03/09/2023 15:22</td>
-      </tr>
-      <tr>
-        <td>10º</td>
-        <td>Papagaio REP TRIP</td>
-        <td>12x12</td>
-        <td>30</td>
-        <td>Rivotril</td>
-        <td>7:10</td>
-        <td>Vitória</td>
-        <td>12/09/2023 18:30</td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-</body>
+    <script src="ranking.js"></script>
+  </body>
 </html>
