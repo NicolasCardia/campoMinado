@@ -9,10 +9,9 @@ if (!isset($_SESSION['id'])) {
     exit;
 }
 
-$idUsuario = $_SESSION['id']; // Obtém o ID do usuário logado
+$idUsuario = $_SESSION['id']; // Obtém o id do usuário logado
 
 try {
-    // Consulta para buscar o histórico de partidas do usuário logado
     $stmt = $pdo->prepare("
         SELECT 
             u.usuario AS nome_jogador,

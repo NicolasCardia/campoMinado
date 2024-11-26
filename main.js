@@ -1,4 +1,3 @@
-// Valida o formulário antes de enviar
 function validateForm() {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
@@ -12,7 +11,7 @@ function validateForm() {
       return false;
   }
 
-  return true; // Permite o envio do formulário
+  return true;
 }
 
 // Exibe mensagem de erro se existir na URL

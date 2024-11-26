@@ -39,7 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'senha' => $senha_hash
         ]);
 
-        // Redirecionar para a página de cadastro com modal
         echo "<script>
                 window.location.href = 'cadastro.html?success=true';
               </script>";
